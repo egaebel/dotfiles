@@ -1,0 +1,32 @@
+# .bash_profile
+
+#FIRST PRIORITY
+#CHANGE THE DEFAULT EDITOR TO SUBLIME
+export UAEDITOR=sublime_text
+export EDITOR=sublime_text
+export VISUAL=sublime_text
+export PATH
+unset USERNAME
+
+#Golang GOPATH stuff
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+PATH=$HOME/.local/bin:$PATH:$HOME/bin:.:/usr/local/bin:/usr/local/cuda-9.2/bin
+export PATH
+
+# Cargo setup
+export PATH=$PATH:$HOME/.cargo/bin
+
+# Tmux picks up .bash_profile not .bashrc
+source ~/.bashrc
+
+# Cargo path
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# set PATH for cuda 10.2 installation
+if [ -d "/usr/local/cuda-10.2/bin/" ]; then
+    export PATH=/usr/local/cuda-10.2/bin${PATH:+:${PATH}}
+    export LD_LIBRARY_PATH=/usr/local/cuda-10.2/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+fi
