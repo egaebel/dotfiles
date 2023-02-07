@@ -45,17 +45,17 @@ alias restart-cups='sudo /etc/init.d/cups restart'
 alias gcurl='curl -H "Authorization: Bearer $(gcloud auth print-access-token)"'
 #--------------------------------------------------------------------------------------
 
-if [[ -d "$HOME/Programs/" ]]; then
+if [[ -d "~/Programs/" ]]; then
     PROGRAMS="$HOME/Programs"
 else
-    PROGRAMS="$HOME/workspace2/Programs"
+    PROGRAMS="$HOME/workspace3/Programs"
 fi
 alias rps='cd "$PROGRAMS"/red-page-scripts'
 alias pro='cd "$PROGRAMS"'
 alias ff='cd ~/fast-files/'
 alias web='cd "$PROGRAMS"/ethangaebel-dot-com'
 
-alias wdocs='cd $HOME/workspace/workspace-documents/'
+alias wdocs='cd $HOME/workspace3/workspace-documents/'
 
 # Tmux windows creation functions
 tmux_startup_func() {
