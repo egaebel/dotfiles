@@ -45,7 +45,7 @@ alias restart-cups='sudo /etc/init.d/cups restart'
 alias gcurl='curl -H "Authorization: Bearer $(gcloud auth print-access-token)"'
 #--------------------------------------------------------------------------------------
 
-if [[ -d "~/Programs/" ]]; then
+if [[ -d "$HOME/Programs/" ]]; then
     PROGRAMS="$HOME/Programs"
 else
     PROGRAMS="$HOME/workspace2/Programs"

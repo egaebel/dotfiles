@@ -14,6 +14,10 @@ export PATH=/usr/lib/jvm/java-11-openjdk-amd64:$PATH
 export PATH=/home/kafka/kafka/bin:$PATH
 export PATH=/usr/local/lib/nodejs/node-v16.15.1-linux-x64/bin:$PATH
 
+# Add a bunch of stuff to the path in a way that works with
+# zsh and bash.
+source ~/.shell_path
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
