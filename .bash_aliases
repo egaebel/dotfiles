@@ -41,16 +41,21 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 alias restart-cups='sudo /etc/init.d/cups restart'
 #--------------------------------------------------------------------------------------
 
+# gcurl, gcloud auth token with curl---------------------------------------------------
+alias gcurl='curl -H "Authorization: Bearer $(gcloud auth print-access-token)"'
+#--------------------------------------------------------------------------------------
+
 if [[ -d "~/Programs/" ]]; then
     PROGRAMS="$HOME/Programs"
 else
-    PROGRAMS="$HOME/workspace2/Programs"
+    PROGRAMS="$HOME/workspace3/Programs"
 fi
+alias rps='cd "$PROGRAMS"/red-page-scripts'
 alias pro='cd "$PROGRAMS"'
 alias ff='cd ~/fast-files/'
 alias web='cd "$PROGRAMS"/ethangaebel-dot-com'
 
-alias wdocs='cd $HOME/workspace/workspace-documents/'
+alias wdocs='cd $HOME/workspace3/workspace-documents/'
 
 # Tmux windows creation functions
 tmux_startup_func() {
@@ -83,4 +88,8 @@ tmux_startup_func() {
 }
 alias tmux-start=tmux_startup_func
 
+alias ba="source bin/activate"
 alias sba="source ../bin/activate"
+
+alias ns="nvidia-smi"
+alias wl="watch -n 1 'tail -n 30 $1'"

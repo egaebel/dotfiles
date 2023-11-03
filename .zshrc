@@ -2,10 +2,10 @@
 # zmodload zsh/zprof
 
 # If you come from bash you might have to change your $PATH.
-#Golang GOPATH stuff
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/go
-export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
+if [ -x "$(command -v go)" ]; then
+    export GOPATH=$(go env GOPATH)
+    export PATH=$GOPATH/bin:$PATH
+fi
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$HOME/bin/sptk-install/bin:$PATH
@@ -19,6 +19,10 @@ export CUDA_HOME=/usr/local/$CUDA_VERSION
 export CUDA_DIR=$CUDA_HOME
 export TRITON_PTXAS_PATH="$CUDA_HOME/bin/ptxas"
 export PATH=$CUDA_HOME/bin:$PATH
+
+# Add a bunch of stuff to the path in a way that works with
+# zsh and bash.
+source ~/.shell_path
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
