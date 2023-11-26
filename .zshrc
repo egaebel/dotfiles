@@ -168,5 +168,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Customize and load fzf
-export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:10:wrap"
+export FZF_CTRL_R_OPTS="--height=80% --layout=reverse --preview 'echo {}' --preview-window down:6:wrap"
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
