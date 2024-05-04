@@ -85,3 +85,5 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 #--------------------------------------------------------------------------------------
 
+# Setup fzf
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
