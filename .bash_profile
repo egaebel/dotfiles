@@ -1,10 +1,8 @@
 # .bash_profile
 
-#FIRST PRIORITY
-#CHANGE THE DEFAULT EDITOR TO SUBLIME
-export UAEDITOR=sublime_text
-export EDITOR=sublime_text
-export VISUAL=sublime_text
+export UAEDITOR=vim
+export EDITOR=vim
+export VISUAL=vim
 export PATH
 unset USERNAME
 
