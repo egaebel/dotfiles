@@ -21,7 +21,8 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 
 # Acquire dotfiles anc configs.
-git clone "$DOTFILES_REPO_URL" || true
-cp "$DOTFILES"/.aliases "$DOTFILES"/.bash_aliases "$HOME" || true
+rm -rf "$DOTFILES"
+git clone "$DOTFILES_REPO_URL"
+cp "$DOTFILES"/.aliases "$DOTFILES"/.bash_aliases "$HOME" 2>/dev/null || true
 cp "$DOTFILES"/.bash_profile "$DOTFILES"/.bashrc "$DOTFILES"/.fzf.zsh "$DOTFILES"/.shell_path "$DOTFILES"/.tmux.conf "$DOTFILES"/.vimrc "$DOTFILES"/.zshrc "$HOME"
 cp "$DOTFILES"/egaebel-2.zsh-theme "$HOME"/.oh-my-zsh/themes/
