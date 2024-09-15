@@ -1,7 +1,5 @@
 # Forked from .bash_profile
 
-#FIRST PRIORITY
-#CHANGE THE DEFAULT EDITOR TO SUBLIME
 export UAEDITOR=vim
 export EDITOR=vim
 export VISUAL=vim
