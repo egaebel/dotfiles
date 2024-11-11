@@ -14,7 +14,7 @@ sudo apt install vim zsh tmux curl git
 
 # Setup zsh and oh-my-zsh.
 sudo chsh -s $(which zsh) "$CUR_USER"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(RUNZSH=no && curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Setup fzf.
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
