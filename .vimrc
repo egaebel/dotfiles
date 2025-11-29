@@ -33,3 +33,6 @@ hi PreProc      cterm=bold	gui=none
 hi Type         cterm=bold	gui=none
 hi Special      cterm=bold	gui=none
 hi NonText	cterm=bold	gui=none
+
+" Set BG to dark
+hi Normal ctermfg=darkgreen ctermbg=black
